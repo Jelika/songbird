@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import styles from './question.module.scss';
+import styles from './question.module.css';
 import bird from '../../assets/bird.jpg';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';

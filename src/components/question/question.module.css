@@ -1,10 +1,3 @@
-$rhap_theme-color: #00bc8c !default;
-$rhap_background-color: #303030;
-$rhap_bar-color: #666 !default;
-$rhap_time-color: white !default;
-$rhap_font-family: bold !default;
-
-@import 'react-h5-audio-player/src/styles';
 
 .questionContainer {
     /* width: 100%; */
