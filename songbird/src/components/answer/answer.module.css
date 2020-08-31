@@ -1,0 +1,90 @@
+.answerContainer {
+    display: flex;
+    flex-direction: column;
+    width: calc(50% - 0.5em);
+    background-color: #4e4e4e;
+    border-radius: 0.7em;
+    padding: 1em;
+    max-height: 308px;
+    margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+    .answerContainer {
+        width: calc(100% - 2rem);
+    }
+}
+
+@media (max-width: 575px) {
+    .answerContainer {
+        max-height: 100%;
+    }
+}
+
+.answerImg {
+    width: calc(160px + 1em);
+    height: 135px;
+    overflow: hidden;
+    border: none;
+    border-radius: 0.4em;
+    object-fit: cover;
+    margin-right: 1em;
+}
+
+.imgAndTitleContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.8em;
+}
+
+.answerInfo {
+    width: 100%;
+    max-width: calc(100% - 160px - 2em);
+    height: 135px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.trackTitle {
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 0.2em;
+    /* margin-left: 0.4em; */
+}
+
+.trackArtist {
+    font-size: 0.8rem;
+    margin-bottom: 1em;
+    position: relative;
+    /* margin-left: 1em; */
+}
+
+.trackArtist::after {
+    content: '';
+    position: absolute;
+    width: 90%;
+    left: 0;
+    top: 2.5em;
+    border-radius: 1em;
+    padding: 0.5px;
+    background-color: #6b6b6b;
+}
+
+.discription {
+    text-align: justify;
+    line-height: 1.4;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 575px) {
+    .imgAndTitleContainer {
+        flex-direction: column;
+    }
+    .answerInfo {
+        max-width: 100%;
+        margin-top: 1rem;
+        height: 90px;
+    }
+}

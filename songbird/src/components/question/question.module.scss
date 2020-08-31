@@ -1,0 +1,81 @@
+$rhap_theme-color: #00bc8c !default;
+$rhap_background-color: #303030;
+$rhap_bar-color: #666 !default;
+$rhap_time-color: white !default;
+$rhap_font-family: bold !default;
+
+@import 'react-h5-audio-player/src/styles';
+
+.questionContainer {
+    /* width: 100%; */
+    margin-top: 1em;
+    padding: 1em;
+    background-color: #4e4e4e;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: none;
+    border-radius: 0.7em;
+}
+
+.questionImg {
+    width: calc(200px + 1em);
+    height: 155px;
+    overflow: hidden;
+    border: none;
+    border-radius: 0.4em;
+    object-fit: cover;
+    margin-right: 1em;
+}
+
+.questionData {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    max-width: calc(100% - 200px - 2em);
+    height: 155px;
+}
+
+.questionArtist {
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+
+.songTitle {
+    font-size: 2rem;
+    font-weight: 500;
+    margin-bottom: 0.2em;
+    margin-left: 0.4em;
+}
+
+.songBird {
+    margin-bottom: 1em;
+    margin-left: 1em;
+    position: relative;
+}
+
+.trackArtist::after {
+    content: '';
+    position: absolute;
+    width: 95%;
+    left: 0;
+    top: 2em;
+    border-radius: 1em;
+    padding: 0.5px;
+    background-color: #6b6b6b;
+}
+
+@media (max-width: 575px) {
+    .questionContainer {
+        flex-direction: column;
+    }
+    .questionImg {
+        margin-right: 0;
+    }
+    .questionData {
+        max-width: 100%;
+        margin-top: 1rem;
+        height: 140px;
+    }
+}
