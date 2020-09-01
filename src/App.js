@@ -35,7 +35,7 @@ function App() {
   }
   
   function nextLevelClick() {
-    if ( page < 5) {
+    if (answer &&  page < 5) {
       setPage(page + 1);
       setAnswer(false);
       setPoints(5);
@@ -45,6 +45,12 @@ function App() {
     }
   }
 
+  function gameEnd() {
+    setMessage(true);
+    setTimeout(() => {
+      window.location.reload()
+    }, 3000)
+  }
 
   return (
     <div className={styles.container}>
@@ -52,11 +58,13 @@ function App() {
       <Topics page={page} />
       <Question birdName={birdName} birdImg={birdImg} answer={answer} birdAudio={answers[page].audio} />
       <div className={styles.answer_container}>
-        <Options page={page} />
+        <Options setBirdSelected={(name)=>setBirdSelected(name)} page={page} />
         <Answer selectedBird={selectedBird} page={page} />
-      </div>
-      <button onClick={nextLevelClick} className={styles.inactiveButton} type="button">Next Level</button>
-    </div>
+      </div>{
+      page<5?(
+      <button onClick={nextLevelClick} className={`${styles.inactiveButton} ${ answer?styles.nextButton:''}`} type="button">Next Level</button>):
+      ( <button onClick={gameEnd} className={styles.nextButton} type="button">End Game</button>)
+      }</div>
   );
 }
 

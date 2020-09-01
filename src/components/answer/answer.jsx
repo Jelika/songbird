@@ -15,6 +15,7 @@ function Answer({ selectedBird, page }) {
         return information;
     }
 
+
     return (
         <div className={styles.answerContainer}>{
             !selectedBird ? (
