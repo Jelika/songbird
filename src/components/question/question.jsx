@@ -1,23 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState,useEffect } from 'react';
 import styles from './question.module.css';
-import bird from '../../assets/bird.jpg';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
 import birds from '../../assets/birds';
 
-function Question() {
+function Question({birdName,birdImg,answer,birdAudio}) {
+
+    useEffect(() => {
+        if (answer === true) {
+          document.querySelectorAll('audio').forEach((el) => el.pause())
+        }
+      }, [answer])
+
     return(
         <div className={styles.questionContainer}>
-            <img className={styles.questionImg} src={bird}/>
+            <img className={styles.questionImg} src={birdImg}/>
             <div className={styles.questionData}>
                 <div>
-                <div className={styles.songTitle}>********</div>
-                <div className={styles.songBird}>********</div>
+                <div className={styles.songTitle}>{birdName}</div>
                 </div>
                 <AudioPlayer
                  customAdditionalControls={[]}
                  showJumpControls={false}
-                  src={birds[0][0].audio}
+                  src={birdAudio}
                 ></AudioPlayer>
             </div>
         </div>
