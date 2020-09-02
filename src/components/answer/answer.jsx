@@ -37,7 +37,7 @@ function Answer({ selectedBird, page }) {
                                 />
                             </div>
                         </div>
-                        <div className={styles.discription}>{returnBirdInf().discription}</div></>
+                        <div className={styles.description}>{returnBirdInf().description}</div></>
                 )}
         </div>
     )

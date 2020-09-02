@@ -1,8 +1,8 @@
-import React, { useState,useEffect } from 'react';
+import React, {useEffect } from 'react';
 import styles from './question.module.css';
 import AudioPlayer from 'react-h5-audio-player';
 import 'react-h5-audio-player/lib/styles.css';
-import birds from '../../assets/birds';
+
 
 function Question({birdName,birdImg,answer,birdAudio}) {
 
@@ -22,7 +22,7 @@ function Question({birdName,birdImg,answer,birdAudio}) {
                 <AudioPlayer
                  customAdditionalControls={[]}
                  showJumpControls={false}
-                  src={birdAudio}
+                src={birdAudio}
                 ></AudioPlayer>
             </div>
         </div>

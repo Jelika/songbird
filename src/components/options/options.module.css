@@ -46,9 +46,9 @@
 }
 
 .correct::before {
-    background-color: seagreen;
+    background-color: seagreen!important;
 }
 
 .uncorrect::before {
-    background-color: salmon;
+    background-color: salmon!important;
 }
