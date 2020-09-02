@@ -1,0 +1,40 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+/* 
+@media (max-width: 575px){
+* {
+  font-size: 13px;
+} 
+} */
+
+.rhap_container {
+    background-color: transparent !important;
+    box-shadow:none !important;
+}
+.rhap_main-controls button {
+    margin: 0 3px;
+    color: #00bc8c;
+    font-size: 35px;
+    width: 35px;
+    height: 35px;
+}
+.rhap_volume-container button{
+ color: #00bc8c;
+}
+ .rhap_progress-indicator,.rhap_volume-indicator{
+       background: #00bc8c!important;
+ }
+ .rhap_time{
+   color: #fff!important;
+ }
