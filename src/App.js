@@ -30,8 +30,11 @@ function App() {
     birds[5][Math.floor(1 + Math.random() * 6) - 1],
   ]);
   console.log(answers[page].name);
+
   function nextLevelClick() {
     console.log(answers[page].name);
+    // document.querySelectorAll('.option').forEach((el)=>{el.className.remove('correct')});
+    // document.querySelectorAll('.option').forEach((el)=>{el.className.remove('uncorrect')});
     if (answer && page < 5) {
       setPage(page + 1);
       setAnswer(false);
