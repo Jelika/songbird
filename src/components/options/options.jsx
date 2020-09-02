@@ -21,13 +21,13 @@ function Options({ setPoints, setBirdImg, setBirdName, setAnswer, page, setBirdS
             setAnswer(true);
             setBirdImg(currentBird.image);
             setBirdName(event.target.innerText);
-            event.target.classList.add('correct');
+            event.target.classList.add('options_correct__2pV4J');
             audioPlay(correct);
             event.target.classList.add('checked');
         } else {
             if (!answer && event.target.className !== 'checked') {
                 audioPlay(error);
-                event.target.classList.add('uncorrect');
+                event.target.classList.add('options_uncorrect__3MMOx');
                 event.target.classList.add('checked');
                 points === 0 ? setPoints(0) : setPoints(points - 1);
             }
@@ -36,7 +36,7 @@ function Options({ setPoints, setBirdImg, setBirdName, setAnswer, page, setBirdS
     }
 
     const birdOptions = birds[page].map((el, index) =>
-        <div className={styles.option}>{el.name}</div>
+        <div className={`${styles.option} `}>{el.name}</div>
     );
 
     return (

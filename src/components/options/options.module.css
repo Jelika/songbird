@@ -35,7 +35,7 @@
     border-bottom-right-radius: 0.7em;
 }
 
-.option::before {
+.option:before {
     content: '';
     position: absolute;
     padding: 5px;
@@ -44,11 +44,10 @@
     border-radius: 50%;
     background-color: #797979;
 }
-
-.correct::before {
+.correct:before {
     background-color: seagreen!important;
 }
 
-.uncorrect::before {
+.uncorrect:before {
     background-color: salmon!important;
 }
